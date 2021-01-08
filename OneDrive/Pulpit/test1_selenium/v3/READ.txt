@@ -1,0 +1,27 @@
+zrobione w ramach https://miten.atlassian.net/browse/WF-1012
+apka utworzona początkowo jako cra i napisana w js, następnie przerobiona na typescript
+najpierw należy uruchomić serwer przez komendę jsos-server --watch user.json w pliku src/server
+na komendę npm start apka otwiera się jako localhost, po uruchomieniu serwera na localhost:3001
+npm test - odpalenie testów (obecnie jest 8, trwają w sumie ok. 15-20 s), są w pliku src\tests
+checkingCorrectEmail - zalogowanie się jako istniejący user, kliknięcie w link, sprawdzenie czy wyświetlany
+			w alercie mail jest taki sam jak zalogowanego usera
+
+createUser+login - stworzenie nowego usera oraz zalogowanie się na niego
+
+emailValidation - sprawdzenie czy wszystkie pola związane z formularzem istnieją, wpisanie poprawnego
+		hasła (zgodnego z załozeniami walidacji), sprawdzanie kilku niepoprawnych oraz poprawnych form
+		email w celu stworzenia nowego usera, sprawdzanie czy tworzy się
+
+loginCorrect - poprawne zalogowanie się na istniejącego usera
+
+loginIncorrect - niepoprawne zalogowanie się na istniejącego usera - wpisywanie niepoprawnego hasła
+
+passValidation - sprawdzenie czy wszystkie pola związane z formularzem istnieją, wpisanie poprawnego
+		emaila (zgodnego z załozeniami walidacji), sprawdzanie kilku niepoprawnych oraz poprawnych form
+		haseł w celu stworzenia nowego usera, sprawdzanie czy tworzy się
+
+login+logout - zalogowanie się na istniejącego usera, kliknięcie w link, wylogowanie się, stworzenie nowego usera,
+		zalogowanie się na niego oraz wylogowanie, ponowne zalogowanie (sprawdzenie czy został w "bazie")
+		oraz kliknęcie w link
+
+userAlreadyExist - proba rejestracji mailem, na ktory już jest user
